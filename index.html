@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sopranos - الموقع الرسمي</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>THE SOPRANOS</h1>
+                <span class="tagline">العائلة فوق كل شيء</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">الرئيسية</a></li>
+                <li><a href="#episodes" class="nav-link">الحلقات</a></li>
+                <li><a href="#characters" class="nav-link">الشخصيات</a></li>
+                <li><a href="#statistics" class="nav-link">الإحصائيات</a></li>
+                <li><a href="#about" class="nav-link">عن المسلسل</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">THE SOPRANOS</h1>
+                <p class="hero-subtitle">رحلة في عالم المافيا الإيطالية الأمريكية</p>
+                <p class="hero-description">
+                    اكتشف كل تفاصيل المسلسل الأسطوري الذي غيّر وجه التلفزيون للأبد. 
+                    من الحلقة الأولى إلى النهاية المثيرة للجدل، تابع رحلة توني سوبرانو وعائلته.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('episodes')">
+                        <i class="fas fa-play"></i>
+                        استكشف الحلقات
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('statistics')">
+                        <i class="fas fa-chart-bar"></i>
+                        الإحصائيات
+                    </button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">86</span>
+                    <span class="stat-label">حلقة</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">مواسم</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">9.2</span>
+                    <span class="stat-label">تقييم IMDb</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Episodes Section -->
+    <section id="episodes" class="episodes-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">جميع الحلقات</h2>
+                <p class="section-subtitle">استكشف كل حلقة من حلقات المسلسل مع التفاصيل والتقييمات</p>
+            </div>
+            
+            <div class="episodes-filter">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-season="all">جميع المواسم</button>
+                    <button class="filter-btn" data-season="1">الموسم 1</button>
+                    <button class="filter-btn" data-season="2">الموسم 2</button>
+                    <button class="filter-btn" data-season="3">الموسم 3</button>
+                    <button class="filter-btn" data-season="4">الموسم 4</button>
+                    <button class="filter-btn" data-season="5">الموسم 5</button>
+                    <button class="filter-btn" data-season="6">الموسم 6</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="episode-search" placeholder="ابحث عن حلقة...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+
+            <div class="episodes-grid" id="episodes-container">
+                <!-- Episodes will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="characters-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">الشخصيات الرئيسية</h2>
+                <p class="section-subtitle">تعرف على الشخصيات المحورية في عالم سوبرانو</p>
+            </div>
+            
+            <div class="characters-grid" id="characters-container">
+                <!-- Characters will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="statistics-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">إحصائيات وحقائق</h2>
+                <p class="section-subtitle">أرقام ومعلومات مثيرة عن المسلسل</p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-skull"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-title">الوفيات</h3>
+                        <p class="stat-number" id="deaths-count">68</p>
+                        <p class="stat-description">إجمالي الوفيات في المسلسل</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-title">الأقوى</h3>
+                        <p class="stat-number">توني سوبرانو</p>
+                        <p class="stat-description">رئيس العائلة</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-title">الثروة</h3>
+                        <p class="stat-number">$40M+</p>
+                        <p class="stat-description">ثروة توني المقدرة</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-title">أعلى تقييم</h3>
+                        <p class="stat-number">9.7/10</p>
+                        <p class="stat-description">Pine Barrens & Long Term Parking</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>تقييمات الحلقات حسب الموسم</h3>
+                    <canvas id="ratingsChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>عدد المشاهدين بالمليون</h3>
+                    <canvas id="viewersChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">عن المسلسل</h2>
+                    <p>
+                        The Sopranos هو مسلسل درامي إجرامي أمريكي من إبداع ديفيد تشيس، عُرض لأول مرة على شبكة HBO في عام 1999. 
+                        يتبع المسلسل حياة توني سوبرانو، رئيس عائلة إجرامية في نيو جيرسي، وهو يحاول التوازن بين حياته العائلية ومسؤولياته كزعيم مافيا.
+                    </p>
+                    <p>
+                        يُعتبر المسلسل من أعظم الأعمال التلفزيونية في التاريخ، وقد حصل على العديد من الجوائز بما في ذلك 21 جائزة إيمي و5 جوائز غولدن غلوب. 
+                        كما أنه ساهم في بداية ما يُعرف بـ "العصر الذهبي الثاني للتلفزيون".
+                    </p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <span class="stat-number">1999-2007</span>
+                            <span class="stat-label">سنوات العرض</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">21</span>
+                            <span class="stat-label">جائزة إيمي</span>
+                        </div>
+                        <div class="about-stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">جائزة غولدن غلوب</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1489599162810-1e666c4e4b3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="The Sopranos">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>THE SOPRANOS</h3>
+                    <p>الموقع الشامل لمحبي المسلسل الأسطوري</p>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#episodes">الحلقات</a></li>
+                        <li><a href="#characters">الشخصيات</a></li>
+                        <li><a href="#statistics">الإحصائيات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تابعنا</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Sopranos Fan Site. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
